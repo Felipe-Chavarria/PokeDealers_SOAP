@@ -5,6 +5,7 @@ Desde la terminal, ubícate en la carpeta PokemonSOAP y ejecuta: " mvn clean com
 Java + Maven
 Postman instalado
 
+
 📦 2. Pokemon SOAP API - Uso con Postman
 Este proyecto expone un servicio SOAP desarrollado en Java que permite gestionar cartas Pokémon. Puedes agregar, listar, buscar, actualizar y eliminar cartas usando Postman.
 
@@ -16,16 +17,19 @@ Abre en tu Postman para y coloca la dirección WSDL: " http://localhost:8080/car
 3. Método: POST
    URL: http://localhost:8080/cartas
 
+
 🧾 3. Configurar los headers
 Ve a la pestaña Headers y agrega:
 
 Key= " Content-Type "	Value= " text/xml; charset=UTF-8 " 
+
 
 🧪 4. Escribir el body (SOAP XML)
 Ve a la pestaña Body:
 
 Marca la opción raw
 Selecciona el tipo XML en el combo de la derecha
+
 
 🧩 5. Escribe un ejemplo de petición
 ✏️ Agregar una carta Pokémon
@@ -42,6 +46,7 @@ Selecciona el tipo XML en el combo de la derecha
    </soapenv:Body>
 </soapenv:Envelope>
 
+
 ✅ Obtener todas las cartas:
 
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://pokemon.com/">
@@ -50,6 +55,7 @@ Selecciona el tipo XML en el combo de la derecha
       <ser:obtenerCartas/>
    </soapenv:Body>
 </soapenv:Envelope>
+
 
 🔍 Buscar por código o nombre:
 
@@ -61,6 +67,7 @@ Selecciona el tipo XML en el combo de la derecha
       </ser:buscarCarta>
    </soapenv:Body>
 </soapenv:Envelope>
+
 
 🛠️ Actualizar una carta:
 
@@ -75,6 +82,7 @@ Selecciona el tipo XML en el combo de la derecha
       </ser:actualizarCarta>
    </soapenv:Body>
 </soapenv:Envelope>
+
 
 ❌ Eliminar una carta:
 
